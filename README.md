@@ -10,7 +10,7 @@ In Typescript, we can use common object-oriented patterns.
 class Point {}
 ```
 #### -- Fields
-##### Field declaration\n
+##### Field declaration
 ```
 class Point {
     x: number;
@@ -20,7 +20,7 @@ const pt = new Point();
 pt.x = 0;
 pt.y = 1;
 ```
-##### Field Initialization\n
+##### Field Initialization
 ```
 const Point {
     x = 0;
