@@ -4,13 +4,13 @@ In Typescript, we can use common object-oriented patterns.
 - Classes
 - Interfaces
 ## Classes
-#### Class Members
+### Class Members
   Here Is the Most basic class - an empty one: 
 ```
 class Point {}
 ```
-#### Fields
-##### Field declaration
+### Fields
+#### Field declaration
 ```
 class Point {
     x: number;
@@ -20,7 +20,7 @@ const pt = new Point();
 pt.x = 0;
 pt.y = 1;
 ```
-##### Field Initialization
+#### Field Initialization
 ```
 const Point {
     x = 0;
@@ -29,9 +29,13 @@ const Point {
 const pt = new Point();
 consolel.log(pt.x, pt.y)
 ```
-##### --strictPropertyInitialization
+#### --strictPropertyInitialization
 Making strictPropertyInitialization to true would not allow you to declare a class fields without initialization
 
-#### Readonly
+### Readonly
 Fields maybe frefixed with the readonly modifier. This prevents assignments to the field outside of the constructor
 
+### Constructor
+The constructor() is used to assign values to the class variables at the time of object creation.
+The constructor() method is called automatically when a class is initiated, and it has to have the exact name "constructor", in fact, if you do not have constructor method, Javascript will add an invisible and empty constructor method.
+A class cannot have more than one constructor. 
