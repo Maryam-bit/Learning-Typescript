@@ -39,3 +39,17 @@ Fields maybe frefixed with the readonly modifier. This prevents assignments to t
 The constructor() is used to assign values to the class variables at the time of object creation.
 The constructor() method is called automatically when a class is initiated, and it has to have the exact name "constructor", in fact, if you do not have constructor method, Javascript will add an invisible and empty constructor method.
 A class cannot have more than one constructor. 
+
+#### Syntax 
+```
+constructor () {
+  // code need to be executed
+}
+```
+#### Parameterized constructor
+```
+constructor(parameter1, parameter2.....,parameterN) {
+  // code need to be executed
+}
+```
+### Static Properties and Static Methods of a class
