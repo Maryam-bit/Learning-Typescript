@@ -52,4 +52,13 @@ constructor(parameter1, parameter2.....,parameterN) {
   // code need to be executed
 }
 ```
-### Static Properties and Static Methods of a class
+### Methods 
+A function properties on a class is called a _method_. Inside a method body, it's still mandatory to access fields and other methods via _this_ keyword.
+```
+class Foo {
+  x: string = "Hello";
+  bar () {
+    this.x += " World";
+ }
+}
+```
