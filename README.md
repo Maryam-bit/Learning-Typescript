@@ -31,3 +31,7 @@ consolel.log(pt.x, pt.y)
 ```
 ##### --strictPropertyInitialization
 Making strictPropertyInitialization to true would not allow you to declare a class fields without initialization
+
+#### Readonly
+Fields maybe frefixed with the readonly modifier. This prevents assignments to the field outside of the constructor
+
