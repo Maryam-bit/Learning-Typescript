@@ -4,12 +4,12 @@ In Typescript, we can use common object-oriented patterns.
 - Classes
 - Interfaces
 ## Classes
-####  -- Class Members
+#### Class Members
   Here Is the Most basic class - an empty one: 
 ```
 class Point {}
 ```
-#### -- Fields
+#### Fields
 ##### Field declaration
 ```
 class Point {
