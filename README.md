@@ -29,3 +29,5 @@ const Point {
 const pt = new Point();
 consolel.log(pt.x, pt.y)
 ```
+##### --strictPropertyInitialization
+Making strictPropertyInitialization to true would not allow you to declare a class fields without initialization
