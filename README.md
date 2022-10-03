@@ -67,3 +67,5 @@ class Foo {
 }
 ```
 
+## Getter/Setter
+https://www.javascripttutorial.net/es6/javascript-getters-and-setters/
