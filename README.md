@@ -1,16 +1,13 @@
-![image](https://user-images.githubusercontent.com/56764144/193456198-751083a0-2361-47eb-918d-d5d0e0cf195b.png)
 
-In Typescript, we can use common object-oriented patterns.
-- Classes
-- Interfaces
-## Classes
-### Class Members
-  Here Is the Most basic class - an empty one: 
+## Class Members
+Here is the most basic class - an empty one:
 ```
 class Point {}
 ```
-### Fields
-#### Field declaration
+
+
+## Fields
+### Field declaration
 ```
 class Point {
     x: number;
@@ -20,7 +17,7 @@ const pt = new Point();
 pt.x = 0;
 pt.y = 1;
 ```
-#### Field Initialization
+### Field Initialization
 ```
 const Point {
     x = 0;
@@ -29,30 +26,37 @@ const Point {
 const pt = new Point();
 consolel.log(pt.x, pt.y)
 ```
-#### --strictPropertyInitialization
+### --strictPropertyInitialization
 Making strictPropertyInitialization to true would not allow you to declare a class fields without initialization
 
-### Readonly
+
+
+## Readonly
 Fields maybe frefixed with the readonly modifier. This prevents assignments to the field outside of the constructor
 
-### Constructor
+
+
+## Constructor
 The constructor() is used to assign values to the class variables at the time of object creation.
 The constructor() method is called automatically when a class is initiated, and it has to have the exact name "constructor", in fact, if you do not have constructor method, Javascript will add an invisible and empty constructor method.
 A class cannot have more than one constructor. 
 
-#### Syntax 
+### Syntax 
 ```
 constructor () {
   // code need to be executed
 }
 ```
-#### Parameterized constructor
+### Parameterized constructor
 ```
 constructor(parameter1, parameter2.....,parameterN) {
   // code need to be executed
 }
 ```
-### Methods 
+
+
+
+## Methods 
 A function properties on a class is called a _method_. Inside a method body, it's still mandatory to access fields and other methods via _this_ keyword.
 ```
 class Foo {
