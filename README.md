@@ -1,5 +1,4 @@
 ![image](https://user-images.githubusercontent.com/56764144/193456198-751083a0-2361-47eb-918d-d5d0e0cf195b.png)
-![image](https://user-images.githubusercontent.com/56764144/193638218-1e7caafd-54be-4b29-aec7-459ec1cf208f.png)
 
 In Typescript, we can use common object-oriented patterns.
 - Classes
@@ -63,6 +62,4 @@ class Foo {
  }
 }
 ```
-
-![image](https://user-images.githubusercontent.com/56764144/193638021-f43ffe5c-9d09-4e8f-a667-ca72470774fe.png)
 
