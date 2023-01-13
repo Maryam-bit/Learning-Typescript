@@ -41,6 +41,23 @@ Note:
 - key difference between ts and js is: javascript uses “dynamic types (resolved at run time), typescript uses “static types” set during development).
 - The core primitive types in Typescript are all lowercase!
 
+##Typescript inference:
+Typescript inference means it understand itself that which type you have in a certain variable and constant. For example,
+```
+const number = 5;
+```
+this does not require type here, since ts automatically infer the variable number with the type of 5, which means its value would not be change throughout the program
+
+```
+let number = 5;
+```
+if we use let instead of const, ts will infer the variable with number type, mean you would not be able to assign value of another type to number
+
+- in these cases defined above, when you are doing declaration with initialization, defining typescript types doesn't make any sense since it automaically infer the types. But it do make sense if we only declare the variable and assume that we will initialize it later on.
+```
+let number1: number;
+number1 = 5
+```
 
 to be continued...
 
