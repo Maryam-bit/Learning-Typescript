@@ -34,6 +34,7 @@ number - “All the numbers, no difference between the integers or floats
 string - All text values
 boolean - just these two, no “truthy” or “falsy” values
 object - any javascript bobject, more specific types (type of object) are possible
+array - any javaswcript array is supported, type can be flexible or strict
 
 Note: 
 - typescript’s type system only helps you during development (i.e before the code get compiled)
