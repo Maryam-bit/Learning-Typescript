@@ -150,6 +150,7 @@ person5.role.push('admin');
 // person5.role = [0, "abc", "def"];  // !!! Error !!! 
 // person5.role[1] = 10  // !!! Error !!!
 ```
+
 to be continued...
 
 
