@@ -1,6 +1,4 @@
 ## Typescript
--## typescript
-
 - TS is a programming language, its a powerful compiler tool compiled into javascript
 - Adds new features and advantages to JS
 
@@ -35,6 +33,8 @@ prerequisite : You should have nodejs installed to run the typescript
 number - “All the numbers, no difference between the integers or floats
 string - All text values
 boolean - just these two, no “truthy” or “falsy” values
+object - any javascript bobject, more specific types (type of object) are possible
+array - any javaswcript array is supported, type can be flexible or strict
 
 Note: 
 - typescript’s type system only helps you during development (i.e before the code get compiled)
@@ -59,6 +59,38 @@ let number1: number;
 number1 = 5
 ```
 
+## Object types
+most general type assignment to object. But it do not give intellisense to the object
+```
+const person: object = {
+    name: {
+        name: 'Maximilian',
+        age: 30
+    }
+}
+console.log(person.name)
+```
+
+Typescript type intference <> better syntax
+```
+const person1 = {
+    name: 'Maximilian',
+    age: 30
+}
+console.log(person1.age)
+```
+
+Explict type assignment
+```
+const person2: {
+    name: string;
+    age: number;
+} = {
+    name: 'Maximilian',
+    age: 30
+}
+console.log(person1.age)
+```
 to be continued...
 
 
