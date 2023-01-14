@@ -24,24 +24,35 @@ console.log(add('2', '3'));
 - Since developers can still write invalid code!
 - TS is a **tool** that helps developers write better code!
 
+
 ## Installation
 install ts from [here](https://www.typescriptlang.org/download)
 prerequisite : You should have nodejs installed to run the typescript
 
+
 ## Typescript basic Types
 **core Types**
+
 number - “All the numbers, no difference between the integers or floats
+
 string - All text values
+
 boolean - just these two, no “truthy” or “falsy” values
+
 object - any javascript bobject, more specific types (type of object) are possible
+
 array - any javaswcript array is supported, type can be flexible or strict
+
 tuple - added by typescript: fixed length array
+
 enum - Added by Typescript: Automatically enumerated global constant identifiers
+
 
 Note: 
 - typescript’s type system only helps you during development (i.e before the code get compiled)
 - key difference between ts and js is: javascript uses “dynamic types (resolved at run time), typescript uses “static types” set during development).
 - The core primitive types in Typescript are all lowercase!
+
 
 ## Typescript inference:
 Typescript inference means it understand itself that which type you have in a certain variable and constant. For example,
@@ -60,6 +71,7 @@ if we use let instead of const, ts will infer the variable with number type, mea
 let number1: number;
 number1 = 5
 ```
+
 
 ## Object types
 most general type assignment to object. But it do not give intellisense to the object
@@ -94,6 +106,7 @@ const person2: {
 console.log(person1.age)
 ```
 
+
 ## Array types
 Array, array type can be string or flexible
 ```
@@ -115,6 +128,7 @@ Multiple types array
 let favoriteActivities2: any[];
 favoriteActivities2 = ['sports', 1]
 ```
+
 
 ## Tuples
 Typescript typle <> added by Typescript : fixed length array <> provides moree strictness
@@ -151,6 +165,78 @@ person5.role.push('admin');
 // person5.role = [0, "abc", "def"];  // !!! Error !!! 
 // person5.role[1] = 10  // !!! Error !!!
 ```
+
+
+## Enums
+enums <> added by typescript - automatically enumerated global constant identifiers. Enum is defined as a your custom type in typescript
+Javascript do not support enums, we could acieve same results as enum like this
+**Without Enum**
+```
+const ADMIN = 0;
+const READ_ONLY = 1;
+const AUTHOR = 2;
+
+const person5 = {
+    name: 'Maximilian',
+    age: 30,
+    hobbies: ['Sports', 'Cooking'],
+    role: ADMIN
+}
+
+if(person5.role  === ADMIN) {
+    console.log('admin!!!')
+}
+```
+
+**With Enum** <> With default enum behavior
+```
+enum Role { ADMIN, READ_ONLY, AUTHOR }; // Role.ADMIN = 0 , Role.READ_ONLY = 1, AUTHOR = 2
+
+const person6 = {
+    name: 'Maximilian',
+    age: 30,
+    hobbies: ['Sports', 'Cooking'],
+    role: Role.ADMIN
+}
+
+if(person6.role  === Role.ADMIN) {
+    console.log('admin!!!')
+}
+```
+
+Typesceript enum <> custom enum values
+```
+enum Role1 { ADMIN = 5, READ_ONLY, AUTHOR }; // Role.ADMIN = 5 , Role.READ_ONLY = 6, AUTHOR = 7
+
+const person7 = {
+    name: 'Maximilian',
+    age: 30,
+    hobbies: ['Sports', 'Cooking'],
+    role: Role1.ADMIN
+}
+
+if(person7.role  === Role1.ADMIN) {
+    console.log('admin!!!')
+}
+```
+
+Typescript enum <> custom enum values part-II
+```
+enum Role2 { ADMIN = 'ADMIN', READ_ONLY = 100, AUTHOR = 5 }; // Role.ADMIN = ADMIN , Role.READ_ONLY = 100, AUTHOR = 5
+
+const person8 = {
+    name: 'Maximilian',
+    age: 30,
+    hobbies: ['Sports', 'Cooking'],
+    role: Role2.ADMIN
+}
+
+if(person8.role  === Role2.ADMIN) {
+    console.log('admin!!!')
+}
+```
+
+
 
 to be continued...
 
