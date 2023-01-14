@@ -1,6 +1,4 @@
 ## Typescript
--## typescript
-
 - TS is a programming language, its a powerful compiler tool compiled into javascript
 - Adds new features and advantages to JS
 
@@ -35,6 +33,7 @@ prerequisite : You should have nodejs installed to run the typescript
 number - “All the numbers, no difference between the integers or floats
 string - All text values
 boolean - just these two, no “truthy” or “falsy” values
+object - any javascript bobject, more specific types (type of object) are possible
 
 Note: 
 - typescript’s type system only helps you during development (i.e before the code get compiled)
@@ -58,6 +57,8 @@ if we use let instead of const, ts will infer the variable with number type, mea
 let number1: number;
 number1 = 5
 ```
+
+## Object types
 
 to be continued...
 
