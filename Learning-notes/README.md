@@ -41,7 +41,7 @@ Note:
 - key difference between ts and js is: javascript uses “dynamic types (resolved at run time), typescript uses “static types” set during development).
 - The core primitive types in Typescript are all lowercase!
 
-##Typescript inference:
+## Typescript inference:
 Typescript inference means it understand itself that which type you have in a certain variable and constant. For example,
 ```
 const number = 5;
