@@ -238,7 +238,8 @@ if(person8.role  === Role2.ADMIN) {
 }
 ```
 
-
+## Any
+Very flexible, You should avoid using any whenever possible because it give you same experience we have in vanilla javscript. Let Typescript inference do its job or explicitly set your own types, but don't fallback to any if you don't need to.
 
 to be continued...
 
