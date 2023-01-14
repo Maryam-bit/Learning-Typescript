@@ -36,6 +36,7 @@ boolean - just these two, no “truthy” or “falsy” values
 object - any javascript bobject, more specific types (type of object) are possible
 array - any javaswcript array is supported, type can be flexible or strict
 tuple - added by typescript: fixed length array
+enum - Added by Typescript: Automatically enumerated global constant identifiers
 
 Note: 
 - typescript’s type system only helps you during development (i.e before the code get compiled)
