@@ -263,6 +263,66 @@ console.log(combinedNames)
 ```
 
 
+## Literal Types
+Literal types are the types which are based on your core types (string or numbers), but with the specific version of a type
+
+
+## Type Aliases
+Type aliases  custom types , not built in javascript, only supported by ts
+```
+type Combinable = number | string;
+function combine2(input1: Combinable, input2: Combinable) {
+    let result;
+    if (typeof input1 === 'number' && typeof input2 === 'number') {
+        result = input1 + input2;
+    } else {
+        result = input1.toString() + input2.toString();
+    }
+    return result;
+}
+
+const combinedAges = combine2(30, 26);
+console.log(combinedAges)
+
+const combinedNames = combine2("Max", "Anna");
+console.log(combinedNames)
+```
+
+
+## Function Return type
+In this function typescript infer the return type of function as number
+```
+function add(n1: number, n2: number) {
+    return n1 + n2;
+}
+```
+
+Function explicit return type
+```
+function add3(n1: number, n2: number): number {
+    return n1 + n2;
+}
+```
+
+note: its good idea to let typescript do its job regarding type inference, and if you have no specific reason for explictyly setting the type, you should therefore not set the type and instead let typescript infer the type
+
+Function void return type <> since its not returning anything
+```
+function printResult(num: number) {
+    console.log("Result: " + num);
+}
+```
+
+and we can also define its type expplicity 
+```
+function printResult2(num: number): void {
+    console.log("Result: " + num);
+}
+```
+
+
+printResult(add(5, 12));
+printResult2(add(5, 12));
 to be continued...
 
 
