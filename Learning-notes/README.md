@@ -238,6 +238,29 @@ if(person8.role  === Role2.ADMIN) {
 }
 ```
 
+## Any
+Very flexible, You should avoid using any whenever possible because it give you same experience we have in vanilla javscript. Let Typescript inference do its job or explicitly set your own types, but don't fallback to any if you don't need to.
+
+
+## Union types
+If we want our function to accept multiple type of values, we can use union types
+```
+function combine(input1: number | string, input2: number | string) {
+    let result;
+    if (typeof input1 === 'number' && typeof input2 === 'number') {
+        result = input1 + input2;
+    } else {
+        result = input1.toString() + input2.toString();
+    }
+    return result;
+}
+
+const combinedAges = combine(30, 26);
+console.log(combinedAges)
+
+const combinedNames = combine("Max", "Anna");
+console.log(combinedNames)
+```
 
 
 to be continued...
