@@ -59,7 +59,37 @@ number1 = 5
 ```
 
 ## Object types
+most general type assignment to object. But it do not give intellisense to the object
+```
+const person: object = {
+    name: {
+        name: 'Maximilian',
+        age: 30
+    }
+}
+console.log(person.name)
+```
 
+Typescript type intference <> better syntax
+```
+const person1 = {
+    name: 'Maximilian',
+    age: 30
+}
+console.log(person1.age)
+```
+
+Explict type assignment
+```
+const person2: {
+    name: string;
+    age: number;
+} = {
+    name: 'Maximilian',
+    age: 30
+}
+console.log(person1.age)
+```
 to be continued...
 
 
