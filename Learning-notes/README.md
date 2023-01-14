@@ -24,24 +24,35 @@ console.log(add('2', '3'));
 - Since developers can still write invalid code!
 - TS is a **tool** that helps developers write better code!
 
+
 ## Installation
 install ts from [here](https://www.typescriptlang.org/download)
 prerequisite : You should have nodejs installed to run the typescript
 
+
 ## Typescript basic Types
 **core Types**
+
 number - “All the numbers, no difference between the integers or floats
+
 string - All text values
+
 boolean - just these two, no “truthy” or “falsy” values
+
 object - any javascript bobject, more specific types (type of object) are possible
+
 array - any javaswcript array is supported, type can be flexible or strict
+
 tuple - added by typescript: fixed length array
+
 enum - Added by Typescript: Automatically enumerated global constant identifiers
+
 
 Note: 
 - typescript’s type system only helps you during development (i.e before the code get compiled)
 - key difference between ts and js is: javascript uses “dynamic types (resolved at run time), typescript uses “static types” set during development).
 - The core primitive types in Typescript are all lowercase!
+
 
 ## Typescript inference:
 Typescript inference means it understand itself that which type you have in a certain variable and constant. For example,
@@ -60,6 +71,7 @@ if we use let instead of const, ts will infer the variable with number type, mea
 let number1: number;
 number1 = 5
 ```
+
 
 ## Object types
 most general type assignment to object. But it do not give intellisense to the object
@@ -94,6 +106,7 @@ const person2: {
 console.log(person1.age)
 ```
 
+
 ## Array types
 Array, array type can be string or flexible
 ```
@@ -115,6 +128,7 @@ Multiple types array
 let favoriteActivities2: any[];
 favoriteActivities2 = ['sports', 1]
 ```
+
 
 ## Tuples
 Typescript typle <> added by Typescript : fixed length array <> provides moree strictness
