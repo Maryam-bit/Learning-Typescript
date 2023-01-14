@@ -47,6 +47,8 @@ tuple - added by typescript: fixed length array
 
 enum - Added by Typescript: Automatically enumerated global constant identifiers
 
+any - any kind of value, no specific type assignment
+
 
 Note: 
 - typescript’s type system only helps you during development (i.e before the code get compiled)
