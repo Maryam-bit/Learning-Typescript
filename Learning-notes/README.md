@@ -398,11 +398,29 @@ generateError("an error occurred", 500)
 ```
 
 
+## The Typescript compiler and its configuration
 
+#### Using watch mode
+In order to compile your Typescript into javascript, you have to run this command
+```
+tsc app.ts
+```
+But watch mode allow typescript to watch file and whenever that file changes, typescript will recompile it into javascript
+``` 
+tsc app.ts --watch
+```
+Watch mode is a very big improvement, but the downside of this approach is that it's only watching one file
 to be continued...
 
 
-
+## Compiling the entire project / Multiple files
+```
+tsc --init
+```
+this command will generate tsconfig.json file, which will allow us to only run ```tsc``` that will automatically compile all the files in this project into javascript. So in order to watch all the ts file you can just run
+```
+tsc --watch
+```
 
 
 ## Class Members
