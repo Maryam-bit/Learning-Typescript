@@ -413,7 +413,14 @@ Watch mode is a very big improvement, but the downside of this approach is that 
 to be continued...
 
 
-
+## Compiling the entire project / Multiple files
+```
+tsc --init
+```
+this command will generate tsconfig.json file, which will allow us to only run ```tsc``` that will automatically compile all the files in this project into javascript. So in order to watch all the ts file you can just run
+```
+tsc --watch
+```
 
 
 ## Class Members
