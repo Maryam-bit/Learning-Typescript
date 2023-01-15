@@ -413,7 +413,7 @@ Watch mode is a very big improvement, but the downside of this approach is that 
 to be continued...
 
 
-## Compiling the entire project / Multiple files
+#### Compiling the entire project / Multiple files
 ```
 tsc --init
 ```
@@ -423,6 +423,60 @@ tsc --watch
 ```
 
 
+#### Including and Excluding files
+The tsconfig.json file tells typescript how it should compile the files.
+**Exclude**
+In the root object of tsconfig, add exclude key and give the files name that you want to exlude when compiling project
+```
+"exclude": [
+  "analytics.ts"
+]
+```
+or 
+```
+"exclude": [
+   "*.ts"   // this means exclude each file that has ts extension
+```
+note: mode_modules are automatically excluded as a default settings
+
+
+**Include**
+Allow you to specifically tell typescript which files you wanna include in the compilation process, and anythin that's not listed here wil not compiled
+```
+"inlude": [
+  "app.ts"
+]
+```
+note: If you wanna compile all TS files in the project, you do not provide include option
+
+
+#### Compiler options
+This allow you to control how your typescript code is compiled. we can provide compiler options in the root of tsconfig file's object
+```
+{
+   "compilerOptions": {
+      ... your options here
+   }
+}
+```
+let's go through all the options one by one that we can define in compiler options
+- **target** : Is ysed to tell typescript for which target javascript version you want to compile the code, by default it provide es5
+
+- **lib**: Allows you to specify which default object and features typescript knows
+
+- **sourceMap**": helps us with debugging and development  
+
+- **outDir**: allow us where we want to put our compiled files.
+```
+"outDir": "./dist"
+```
+this will move all the compiled JS files into dist folder
+
+**rootDir**
+This option makes sure that ts compiler do not look into other directories. It also make sure that the project structure is also kept in dist folder
+
+**noEmitOnError**
+If we have an error in ts will, ts will compile and generate file anyway, to avoid this we set noEmmitOnError to true. By default it is false
 ## Class Members
 Here is the most basic class - an empty one:
 ```
