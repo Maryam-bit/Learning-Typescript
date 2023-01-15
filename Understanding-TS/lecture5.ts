@@ -11,7 +11,7 @@ person4.role.push('admin');
 person4.role[1] = 10
 
 // In order to have role contain only 2 elements , first should be number, 2nd should be string,  we can use tuple
-const person5: {
+const person9: {
     name: string,
     age: number,
     hobbies: string[],
@@ -24,6 +24,6 @@ const person5: {
 }
 
 // push is an excention which is allowed in typles, so unfortunately typescript can't catch this error, but atleast it ensure that we are not assigning a wrong value
-person5.role.push('admin'); 
-// person5.role = [0, "abc", "def"];  // !!! Error !!! 
-// person5.role[1] = 10  // !!! Error !!!
+person9.role.push('admin'); 
+// person9.role = [0, "abc", "def"];  // !!! Error !!! 
+// person9.role[1] = 10  // !!! Error !!!
