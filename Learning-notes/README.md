@@ -398,6 +398,14 @@ generateError("an error occurred", 500)
 ```
 
 
+## The Typescript compiler and its configuration
+**Using watch mode**
+In order to compile your Typescript into javascript, you have to run this command
+```
+tsc app.ts
+```
+But watch mode allow typescript to watch file and whenever that file changes, typescript will recompile it into javascript
+``` tsc app.ts --watch```
 
 to be continued...
 
