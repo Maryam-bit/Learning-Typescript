@@ -460,13 +460,13 @@ This allow you to control how your typescript code is compiled. we can provide c
 }
 ```
 let's go through all the options one by one that we can define in compiler options
-**target** : Is ysed to tell typescript for which target javascript version you want to compile the code, by default it provide es5
+- **target** : Is ysed to tell typescript for which target javascript version you want to compile the code, by default it provide es5
 
-**lib**: Allows you to specify which default object and features typescript knows
+- **lib**: Allows you to specify which default object and features typescript knows
 
-**sourceMap**": helps us with debugging and development  
+- **sourceMap**": helps us with debugging and development  
 
-**outDir**: allow us where we want to put our compiled files.
+- **outDir**: allow us where we want to put our compiled files.
 ```
 "outDir": "./dist"
 ```
