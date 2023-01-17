@@ -484,6 +484,35 @@ class Point {}
 ```
 
 
+## Classes & Interfaces
+To understand classes let's look into Object oriented programming
+
+#### What's Object Oriented Programming (OOP)?
+- The idea behind OOP and classes is to work with real-life entities in your Code
+
+**For example** 
+Render a list of products which were fetched from a server (database) <> Object holds rendering + fetching logic
+
+#### Classes and Instances
+Classes are the **blueprints for objects**, define how objects look like, which properties and methods they have, and make creation of multiple similar objects much easier, here is how you can write your first class
+
+```
+// Convention is to name class with first letter uppercase
+// here name is called the field of the department class
+class Department {
+    name: string;
+    constructor (n: string) {
+        this.name = n;
+    }
+}
+
+// now create  department object
+const accounting = new Department("Accounting");
+console.log(accounting)
+```
+
+## Creating a first Class
+
 ## Fields
 ### Field declaration
 ```
