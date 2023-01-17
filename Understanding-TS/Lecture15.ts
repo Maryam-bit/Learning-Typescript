@@ -1,7 +1,7 @@
 //classes and inheritance
 
 class Department2 {
-  private employees: string[] = [];
+  protected employees: string[] = [];
   constructor(id: string, public name: string) {}
 
   // methods
@@ -33,6 +33,11 @@ class AccountingDepartment extends Department2 {
     super(id, "IT");
   }
 
+  addEmployee(name: string) {
+      if(name === 'max') return;
+    // we can not change the private property of inherited class, for this we can use protected keyword, its just available in inherited classes, and its own class
+      this.employees.push(name)
+  }
   addReport(text: string) {
     this.reports.push(text);
   }
@@ -43,7 +48,7 @@ class AccountingDepartment extends Department2 {
 }
 
 const it = new ITDepartment("d1", ["max"]);
-it.addEmployee("Max");
+it.addEmployee("max");
 it.addEmployee("Manu");
 it.describe();
 console.log(it);
