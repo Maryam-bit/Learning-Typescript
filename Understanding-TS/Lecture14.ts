@@ -1,28 +1,31 @@
-// Classes 
+// Classes
 // Convention is to name class with first letter uppercase
 // here name is called the field of the department class
 // constructor is a method, which is a reserved word
 class Department {
-    name: string;
-    // make the employees private so that they can only be accessible inside the class
-    private employees: string[] = [];
-    constructor (n: string) {
-        this.name = n;
-    }
+  // make the employees private so that they can only be accessible inside the class
+  private employees: string[] = [];
 
-    // method
-    describe (this: Department) {
-        console.log("Department: " + this.name)
-    }
+  // name: string;
+  // constructor (n: string) {
+  //     this.name = n;
+  // }
+  // the above code to define constructor is same as defined below <> shorthand initialization
+  constructor(public name: string) {}
 
-    addEmployee(employee: string) {
-        this.employees.push(employee)
-    }
+  // method
+  describe(this: Department) {
+    console.log("Department: " + this.name);
+  }
 
-    printEmployeeInformation() {
-        console.log(this.employees.length)
-        console.log(this.employees)
-    }
+  addEmployee(employee: string) {
+    this.employees.push(employee);
+  }
+
+  printEmployeeInformation() {
+    console.log(this.employees.length);
+    console.log(this.employees);
+  }
 }
 
 // now create  department object
