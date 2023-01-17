@@ -10,5 +10,5 @@ class Department {
 }
 
 // now create  department object
-const accounting = new Department("Accountinghgdrer");
+const accounting = new Department("Accounting");
 console.log(accounting)
