@@ -544,6 +544,14 @@ class Department {
 ```
 
 
+#### readonly
+readonly keyword is introduced by ts which make  sure that if you try to mutate its property, you will fail
+```
+constructor (public readonly name: string) {}
+this.name = "hello" // error, not allowed
+```
+
+
 ## Fields
 ### Field declaration
 ```
