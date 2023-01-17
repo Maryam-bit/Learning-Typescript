@@ -11,7 +11,9 @@ class Department {
   //     this.name = n;
   // }
   // the above code to define constructor is same as defined below <> shorthand initialization
-  constructor(public name: string) {}
+//   constructor(public name: string) {}
+// readonly makes the field immutable 
+  constructor(public readonly name: string) {}
 
   // method
   describe(this: Department) {
