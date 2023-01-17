@@ -28,9 +28,26 @@ class ITDepartment extends Department2 {
 }
 
 class AccountingDepartment extends Department2 {
+    private lastReport: string;
+
+    // since lastReport is private and we can't access it outside the class. but getter make it accessible
+    get mostRecentReport () {
+        if(this.lastReport) {
+            return this.lastReport;
+        }
+        throw new Error("no report found");
+    }
+
+    set mostRecentReport (value: string) {
+        if(!value) {
+            this.addReport(value)
+        }
+    }
+
   constructor(id: string, private reports: string[]) {
     // super calls constructor of the base class from subclass
     super(id, "IT");
+    this.lastReport = reports[0];
   }
 
   addEmployee(name: string) {
@@ -40,6 +57,7 @@ class AccountingDepartment extends Department2 {
   }
   addReport(text: string) {
     this.reports.push(text);
+    this.lastReport = text;
   }
 
   printReports() {
@@ -55,5 +73,7 @@ console.log(it);
 
 
 const accounting2 = new AccountingDepartment("d2", []);
+accounting2.mostRecentReport = '';
+console.log(accounting2.mostRecentReport)
 accounting2.addReport("Something went wrong...")
 accounting2.printReports()
