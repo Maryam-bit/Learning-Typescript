@@ -496,6 +496,7 @@ Render a list of products which were fetched from a server (database) <> Object 
 #### Classes and Instances
 Classes are the **blueprints for objects**, define how objects look like, which properties and methods they have, and make creation of multiple similar objects much easier, here is how you can write your first class
 
+## Creating a first Class
 ```
 // Convention is to name class with first letter uppercase
 // here name is called the field of the department class
@@ -511,7 +512,37 @@ const accounting = new Department("Accounting");
 console.log(accounting)
 ```
 
-## Creating a first Class
+#### This keyword
+This keyword is use to access the fields or methods of classes with in the class instance
+
+
+#### Private access modifier
+You can make the fields public or private by using **public** and **private** keyword, the fields with private access modifiers are only accessible inside the class,
+the fields of classes are by default public
+```
+// added employee field with in department class
+private employees: string[] = [];
+
+accounting.employees[2] = "anna"; // error because you cannot change employee value outside the class
+```
+
+#### shorthand initialization
+``` 
+class Department {
+  name: string;
+  
+  constructor (n: string) {
+     this.name = n;
+  }
+}
+```
+This code(defined above) is same as this
+```
+class Department {
+   constructor (public name: string) {}
+}
+```
+
 
 ## Fields
 ### Field declaration
