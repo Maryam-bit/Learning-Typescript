@@ -552,6 +552,46 @@ this.name = "hello" // error, not allowed
 ```
 
 
+## Static methods and properties
+To access the static methods of class, you do not need to instantiate class. when you add static method in class, you can not access them from non static parts of the class. Exmaple
+```
+class Department2 {
+  static fiscalYear = 2020;
+  protected employees: string[] = [];
+  constructor(public name: string) {
+    // console.log(this.fiscalyear) /// !ERROR - we can not access them in on static parts inside the class
+  }
+
+  static createEmployee(name: string) {
+    return { name: name };
+  }
+}
+
+const it = new Department2("abc");
+console.log(it);
+
+const employee1 = Department2.createEmployee("maxim");
+console.log(employee1, "employee1", Department2.fiscalYear);
+```
+
+
+## Interface
+An Interface describe the structure of an object. It only exists in Javscript
+```
+interface Person {
+    name: string;
+    age: number;
+    title: string = "acb" // error, we can not initialize value in interface
+    
+    method
+    greet(phrase: string): void;
+   
+}
+   
+    let user1: Person;
+}
+```
+
 ## Fields
 ### Field declaration
 ```
