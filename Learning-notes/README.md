@@ -594,6 +594,7 @@ interface Person {
 
 
 #### Interface with classes
+```
 interface Greetable {
     name: string;
     greet(phrase: string): void;
@@ -606,14 +607,14 @@ class Person implements Greetable {
         this.name = n;
     }
     greet(phrase: string) {
-        console.log(phrase + " " + this.name)
+        console.log(phrase + " " + this.name) // Hi there - I am Maxim
     }
 } 
 
 let user2: Greetable
 user2 = new Person("Maxim");
 user2.greet("HI there - I am")
-
+```
 
 ## Fields
 ### Field declaration
