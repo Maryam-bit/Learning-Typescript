@@ -575,6 +575,22 @@ console.log(employee1, "employee1", Department2.fiscalYear);
 ```
 
 
+## Interface
+An Interface describe the structure of an object. It only exists in Javscript
+```
+interface Person {
+    name: string;
+    age: number;
+    title: string = "acb" // error, we can not initialize value in interface
+    
+    method
+    greet(phrase: string): void;
+   
+}
+   
+    let user1: Person;
+}
+```
 
 ## Fields
 ### Field declaration
