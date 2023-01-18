@@ -593,7 +593,7 @@ interface Person {
 ```
 
 
-#### Interface with classes
+## Interface with classes
 ```
 interface Greetable {
     name: string;
@@ -615,6 +615,61 @@ let user2: Greetable
 user2 = new Person("Maxim");
 user2.greet("HI there - I am")
 ```
+
+
+## Read only interface properties
+We can also make interface properties readonly , but not public, private or protected. for example
+```
+interface Greetabl3 {
+  readonly name: string;
+}
+
+class Person implements Greetabl3 {
+  name: string;
+  constructor(n: string) {
+    this.name = n;
+  }
+}
+
+let user3: Greetabl3;
+user3 = new Person("Maxim");
+
+user3.name = "Maryam Noor"; // error becuase name is read only
+
+```
+
+
+## Extending Interfaces
+We can extend interface to split them into multiple parts like this
+```
+
+interface Named {
+    readonly name: string;
+}
+
+interface Greetable4 extends Named {
+    greet(phrase: string): void;
+}
+
+// extend more than one 
+// interface Greetable4 extends Named , AnotherName {}
+
+  class Person6 implements Greetable4 {
+    name: string;
+    constructor(n: string) {
+      this.name = n;
+    }
+    greet(phrase: string) {
+        console.log(phrase + " " + this.name)
+    }
+  }
+  
+  let user4: Greetable4;
+  user4 = new Person6("Maxim");
+```
+
+
+
 
 ## Fields
 ### Field declaration
