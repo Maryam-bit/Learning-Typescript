@@ -1,4 +1,4 @@
-// optional properties
+// optional properties of interface
 // make any property of interface optional using ? before :
 
 interface Named2 {
