@@ -33,21 +33,21 @@ prerequisite : You should have nodejs installed to run the typescript
 ## Typescript basic Types
 **core Types**
 
-number - “All the numbers, no difference between the integers or floats
+**number** - “All the numbers, no difference between the integers or floats
 
-string - All text values
+**string** - All text values
 
-boolean - just these two, no “truthy” or “falsy” values
+**boolean** - just these two, no “truthy” or “falsy” values
 
-object - any javascript bobject, more specific types (type of object) are possible
+**object** - any javascript bobject, more specific types (type of object) are possible
 
-array - any javaswcript array is supported, type can be flexible or strict
+**array** - any javaswcript array is supported, type can be flexible or strict
 
-tuple - added by typescript: fixed length array
+**tuple** - added by typescript: fixed length array
 
-enum - Added by Typescript: Automatically enumerated global constant identifiers
+**enum** - Added by Typescript: Automatically enumerated global constant identifiers
 
-any - any kind of value, no specific type assignment
+**any** - any kind of value, no specific type assignment
 
 
 Note: 
