@@ -33,21 +33,21 @@ prerequisite : You should have nodejs installed to run the typescript
 ## Typescript basic Types
 **core Types**
 
-number - “All the numbers, no difference between the integers or floats
+**number** - “All the numbers, no difference between the integers or floats
 
-string - All text values
+**string** - All text values
 
-boolean - just these two, no “truthy” or “falsy” values
+**boolean** - just these two, no “truthy” or “falsy” values
 
-object - any javascript bobject, more specific types (type of object) are possible
+**object** - any javascript bobject, more specific types (type of object) are possible
 
-array - any javaswcript array is supported, type can be flexible or strict
+**array** - any javaswcript array is supported, type can be flexible or strict
 
-tuple - added by typescript: fixed length array
+**tuple** - added by typescript: fixed length array
 
-enum - Added by Typescript: Automatically enumerated global constant identifiers
+**enum** - Added by Typescript: Automatically enumerated global constant identifiers
 
-any - any kind of value, no specific type assignment
+**any** - any kind of value, no specific type assignment
 
 
 Note: 
@@ -400,7 +400,7 @@ generateError("an error occurred", 500)
 
 ## The Typescript compiler and its configuration
 
-#### Using watch mode
+## Using watch mode
 In order to compile your Typescript into javascript, you have to run this command
 ```
 tsc app.ts
@@ -413,7 +413,7 @@ Watch mode is a very big improvement, but the downside of this approach is that 
 to be continued...
 
 
-#### Compiling the entire project / Multiple files
+## Compiling the entire project / Multiple files
 ```
 tsc --init
 ```
@@ -423,7 +423,7 @@ tsc --watch
 ```
 
 
-#### Including and Excluding files
+## Including and Excluding files
 The tsconfig.json file tells typescript how it should compile the files.
 **Exclude**
 In the root object of tsconfig, add exclude key and give the files name that you want to exlude when compiling project
@@ -450,7 +450,7 @@ Allow you to specifically tell typescript which files you wanna include in the c
 note: If you wanna compile all TS files in the project, you do not provide include option
 
 
-#### Compiler options
+## Compiler options
 This allow you to control how your typescript code is compiled. we can provide compiler options in the root of tsconfig file's object
 ```
 {
@@ -516,7 +516,7 @@ console.log(accounting)
 This keyword is use to access the fields or methods of classes with in the class instance
 
 
-#### Private access modifier
+## Private access modifier
 You can make the fields public or private by using **public** and **private** keyword, the fields with private access modifiers are only accessible inside the class,
 the fields of classes are by default public
 ```
@@ -526,7 +526,7 @@ private employees: string[] = [];
 accounting.employees[2] = "anna"; // error because you cannot change employee value outside the class
 ```
 
-#### shorthand initialization
+## shorthand initialization
 ``` 
 class Department {
   name: string;
@@ -544,7 +544,7 @@ class Department {
 ```
 
 
-#### readonly
+## readonly
 readonly keyword is introduced by ts which make  sure that if you try to mutate its property, you will fail
 ```
 constructor (public readonly name: string) {}
@@ -710,7 +710,7 @@ const Point {
 const pt = new Point();
 consolel.log(pt.x, pt.y)
 ```
-### --strictPropertyInitialization
+## --strictPropertyInitialization
 Making strictPropertyInitialization to true would not allow you to declare a class fields without initialization
 
 
@@ -725,16 +725,41 @@ The constructor() is used to assign values to the class variables at the time of
 The constructor() method is called automatically when a class is initiated, and it has to have the exact name "constructor", in fact, if you do not have constructor method, Javascript will add an invisible and empty constructor method.
 A class cannot have more than one constructor. 
 
-### Syntax 
+## Syntax 
 ```
 constructor () {
   // code need to be executed
 }
 ```
-### Parameterized constructor
+## Parameterized constructor
 ```
 constructor(parameter1, parameter2.....,parameterN) {
   // code need to be executed
+}
+```
+
+
+## Intersection types
+Intersection types Allow us to combine other types
+
+```
+type Admin = {
+    name: string;
+    privileges: string[]; 
+};
+
+type Employee = {
+    name: string;
+    startDate: Date;
+}
+
+type ElevatedEmployee = Admin & Employee
+// interface ElevatedEmployee2 extends Employee, Admin {}  /// !same as above intesection method
+
+const el: ElevatedEmployee = {
+    name: "Max",
+    privileges: ['create server'],
+    startDate: new Date()
 }
 ```
 
