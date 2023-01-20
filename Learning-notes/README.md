@@ -739,6 +739,31 @@ constructor(parameter1, parameter2.....,parameterN) {
 ```
 
 
+## Intersection types
+Intersection types Allow us to combine other types
+
+```
+type Admin = {
+    name: string;
+    privileges: string[]; 
+};
+
+type Employee = {
+    name: string;
+    startDate: Date;
+}
+
+type ElevatedEmployee = Admin & Employee
+// interface ElevatedEmployee2 extends Employee, Admin {}  /// !same as above intesection method
+
+const el: ElevatedEmployee = {
+    name: "Max",
+    privileges: ['create server'],
+    startDate: new Date()
+}
+```
+
+
 
 ## Methods 
 A function properties on a class is called a _method_. Inside a method body, it's still mandatory to access fields and other methods via _this_ keyword.
