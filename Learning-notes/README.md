@@ -477,11 +477,7 @@ This option makes sure that ts compiler do not look into other directories. It a
 
 **noEmitOnError**
 If we have an error in ts will, ts will compile and generate file anyway, to avoid this we set noEmmitOnError to true. By default it is false
-## Class Members
-Here is the most basic class - an empty one:
-```
-class Point {}
-```
+
 
 
 ## Classes & Interfaces
@@ -687,55 +683,6 @@ interface Named2 {
   let user6: Named2;
   user6 = new Person7();
   
-```
-
-
-## Fields
-### Field declaration
-```
-class Point {
-    x: number;
-    y: number;
-}
-const pt = new Point();
-pt.x = 0;
-pt.y = 1;
-```
-### Field Initialization
-```
-const Point {
-    x = 0;
-    y = 1;
-}
-const pt = new Point();
-consolel.log(pt.x, pt.y)
-```
-## --strictPropertyInitialization
-Making strictPropertyInitialization to true would not allow you to declare a class fields without initialization
-
-
-
-## Readonly
-Fields maybe frefixed with the readonly modifier. This prevents assignments to the field outside of the constructor
-
-
-
-## Constructor
-The constructor() is used to assign values to the class variables at the time of object creation.
-The constructor() method is called automatically when a class is initiated, and it has to have the exact name "constructor", in fact, if you do not have constructor method, Javascript will add an invisible and empty constructor method.
-A class cannot have more than one constructor. 
-
-## Syntax 
-```
-constructor () {
-  // code need to be executed
-}
-```
-## Parameterized constructor
-```
-constructor(parameter1, parameter2.....,parameterN) {
-  // code need to be executed
-}
 ```
 
 
@@ -1085,6 +1032,60 @@ function merge4<T extends object, U extends object>(objA: T, objB: U) {
 const mergeObj4 = merge4({name: "Max"}, 14) // error
 const mergeObj5 = merge4({name: "Max"}, {age: 14}) // error
 console.log(mergeObj5) // { name: 'Max', age: 14 }
+```
+
+## Class Members
+Here is the most basic class - an empty one:
+```
+class Point {}
+```
+
+## Fields
+### Field declaration
+```
+class Point {
+    x: number;
+    y: number;
+}
+const pt = new Point();
+pt.x = 0;
+pt.y = 1;
+```
+### Field Initialization
+```
+const Point {
+    x = 0;
+    y = 1;
+}
+const pt = new Point();
+consolel.log(pt.x, pt.y)
+```
+## --strictPropertyInitialization
+Making strictPropertyInitialization to true would not allow you to declare a class fields without initialization
+
+
+
+## Readonly
+Fields maybe frefixed with the readonly modifier. This prevents assignments to the field outside of the constructor
+
+
+
+## Constructor
+The constructor() is used to assign values to the class variables at the time of object creation.
+The constructor() method is called automatically when a class is initiated, and it has to have the exact name "constructor", in fact, if you do not have constructor method, Javascript will add an invisible and empty constructor method.
+A class cannot have more than one constructor. 
+
+## Syntax 
+```
+constructor () {
+  // code need to be executed
+}
+```
+## Parameterized constructor
+```
+constructor(parameter1, parameter2.....,parameterN) {
+  // code need to be executed
+}
 ```
 
 
