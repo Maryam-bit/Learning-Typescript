@@ -1,3 +1,4 @@
+// interface with classes 
 // Interface only works with object, we can also achieve same with custom type , but the interfaces gives us the clear idea that
 // this declaration is for object
 // also allow us to share functionality amongst different classes
