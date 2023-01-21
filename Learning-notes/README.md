@@ -927,6 +927,7 @@ console.log(storedData) // DEFAULT
 
 ## Generics
 A generic type is a type which is kind of connected with some other type.
+Provides flexibility combined with type safety 🌚
 It is really flexible regarding which exact type other type is
 
 ```
@@ -1033,6 +1034,83 @@ const mergeObj4 = merge4({name: "Max"}, 14) // error
 const mergeObj5 = merge4({name: "Max"}, {age: 14}) // error
 console.log(mergeObj5) // { name: 'Max', age: 14 }
 ```
+
+
+## keyof constraint
+
+```
+function extractAndConvert<T extends object, U extends keyof T> (obj: T, key: U) {
+    return "value: " + obj[key];
+}
+
+console.log(extractAndConvert({name: "max"}, "name"))
+```
+
+
+## Generic classes
+
+```
+class DataStorage<T extends string | number | boolean> {
+    private data: T[] = [];
+
+    addItem(item: T) {
+        this.data.push(item)
+    }
+
+    removeItem(item: T) {
+        if(this.data.indexOf(item) === -1) {
+            this.data.splice(this.data.indexOf(item), 1)
+        }
+    }
+    
+    getItems() {
+        return [...this.data]
+    }
+}
+
+const textStorage = new DataStorage<string>();
+textStorage.addItem("Max")
+textStorage.addItem("Manu")
+textStorage.removeItem("Max")
+console.log(textStorage.getItems());
+
+const numberStorage = new DataStorage<number | string>();
+```
+
+
+## Generic utility types
+
+```
+interface CourseGoal {
+    title: string;
+    description: string;
+    completeUntil: Date;
+}
+
+function createCourseGoal (title: string,  description: string, date: Date): CourseGoal {
+    // partial utility type convert all the properties into optional ones
+    // it means CourseGoal properties are option but in the end our object will look like courseGoal
+    
+    
+    let courseGoal: Partial<CourseGoal> = {};
+    courseGoal.title = title;
+    courseGoal.description = description;
+    courseGoal.completeUntil = date;
+    return courseGoal as CourseGoal; // we need to convert return type into courseGoalfrom partial course goal
+    // return { title: title, description: description, completeUntil: date }
+}
+
+```
+
+If we want to  make it locked array, (do not allow to add more items)
+We can use readonly utility type 
+
+```
+const names3: Readonly<string[]> = ["Max", "Anna"]
+names3.push("Manu") // not allowed
+
+```
+
 
 ## Class Members
 Here is the most basic class - an empty one:
