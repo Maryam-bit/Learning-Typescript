@@ -927,6 +927,7 @@ console.log(storedData) // DEFAULT
 
 ## Generics
 A generic type is a type which is kind of connected with some other type.
+Provides flexibility combined with type safety 🌚
 It is really flexible regarding which exact type other type is
 
 ```
