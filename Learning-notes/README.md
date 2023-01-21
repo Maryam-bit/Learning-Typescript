@@ -991,8 +991,6 @@ const names1 = []
 const names2: Array<string> = []; // string[]
 // now TS would allow me to perform string operations on array elements 
 names2[0].split(' ')
-```
-
 
 // promise
 // TS will infer promise's return type as Promise<unknown>, if 
@@ -1005,7 +1003,9 @@ const promise: Promise<any> = new Promise((resolve, reject) => {
 promise.then(data => {
     data.split(' ');
 })
-
+```
+   
+   
 ## Methods 
 A function properties on a class is called a _method_. Inside a method body, it's still mandatory to access fields and other methods via _this_ keyword.
 ```
