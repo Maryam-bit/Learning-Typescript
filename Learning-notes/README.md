@@ -477,11 +477,7 @@ This option makes sure that ts compiler do not look into other directories. It a
 
 **noEmitOnError**
 If we have an error in ts will, ts will compile and generate file anyway, to avoid this we set noEmmitOnError to true. By default it is false
-## Class Members
-Here is the most basic class - an empty one:
-```
-class Point {}
-```
+
 
 
 ## Classes & Interfaces
@@ -1038,7 +1034,11 @@ const mergeObj5 = merge4({name: "Max"}, {age: 14}) // error
 console.log(mergeObj5) // { name: 'Max', age: 14 }
 ```
 
-
+## Class Members
+Here is the most basic class - an empty one:
+```
+class Point {}
+```
 
 ## Fields
 ### Field declaration
