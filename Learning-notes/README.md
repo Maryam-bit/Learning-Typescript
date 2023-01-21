@@ -849,6 +849,63 @@ function moveAnimal (animal: Animal) {
 moveAnimal({type: 'bird', flyingSpeed: 10})
 ```
 
+## Type casting
+
+Type casting helps to tell ts that some value is of a specific value when ts don't know
+
+Typescript infer its (paragraph's type as HTMLParagraphElement | null
+```
+const paragraph = document.querySelector('p')
+```
+
+TS infer its (input's ) type as HTMLElement | null which means typescript is unable to recognize that its HTML Input Element
+```
+const userInputElement = document.getElementById('user-input')
+```
+
+You will get the following error while setting value to it 
+'userInputElement' is possibly 'null'.ts(18047)
+Property 'value' does not exist on type 'HTMLElement'
+```
+userInputElement.value = "hi there"
+```
+
+Now you would need to use type casting here
+syntax 1
+```
+const userInputElement2 = <HTMLInputElement>document.getElementById('user-input')
+userInputElement2.value = "hi there"
+```
+
+syntax 2
+! means this express will never yeild null, typescript thought that the user-input element return by DOM  might return null
+but if we as a developer knows that it would not return null then we can use this !.
+```
+const userInputElement3  = document.getElementById('user-input')! as HTMLInputElement
+userInputElement3.value = "hi there"
+```
+
+
+## Index Properties
+Allow us to create flexible objects
+
+If you don't know the exact property name of an object, let see the error example
+// { email: "not a valid email", username: "must start with a capital character"}
+
+```
+interface ErrorContainer {
+    [prop: string]: string;
+}
+```
+
+Any thing that can be converted to a string is a valid property name. 
+```
+const errorBag: ErrorContainer = {
+    email: "not a vlid email",
+    username: "must stasrt with a capital character"
+}
+```
+
 
 ## Methods 
 A function properties on a class is called a _method_. Inside a method body, it's still mandatory to access fields and other methods via _this_ keyword.
