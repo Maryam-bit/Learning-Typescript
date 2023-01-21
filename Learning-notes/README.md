@@ -1090,6 +1090,8 @@ interface CourseGoal {
 function createCourseGoal (title: string,  description: string, date: Date): CourseGoal {
     // partial utility type convert all the properties into optional ones
     // it means CourseGoal properties are option but in the end our object will look like courseGoal
+    
+    
     let courseGoal: Partial<CourseGoal> = {};
     courseGoal.title = title;
     courseGoal.description = description;
