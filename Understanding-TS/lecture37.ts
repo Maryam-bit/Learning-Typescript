@@ -1,4 +1,4 @@
-// generics classes
+// generic classes
 
 class DataStorage<T extends string | number | boolean> {
     private data: T[] = [];
