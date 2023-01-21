@@ -1055,6 +1055,40 @@ console.log(mergeObj2.age, mergeObj2.name)
 ```
 
 
+## Constraints 
+
+let's go with this example
+this function should only take an object everytime, but currentlty it's taking any type of value. 
+Here if we want to restrict the type of T and U  
+We can do that using type constraints
+
+```
+// ---- without constraints
+function merge3<T, U>(objA: T, objB: U) {
+    return  { ...objA, ...objB };
+}
+```
+
+If we pass any literal instead of object, It would not be merged into another obj.
+
+```
+const mergeObj3 = merge3({name: "Max"}, 14)
+console.log(mergeObj3) // { name: 'Max' }
+```
+
+```
+// ----- with constraints -----
+function merge4<T extends object, U extends object>(objA: T, objB: U) {
+    return  { ...objA, ...objB };
+}
+
+const mergeObj4 = merge4({name: "Max"}, 14) // error
+const mergeObj5 = merge4({name: "Max"}, {age: 14}) // error
+console.log(mergeObj5) // { name: 'Max', age: 14 }
+```
+
+
+
 ## Methods 
 A function properties on a class is called a _method_. Inside a method body, it's still mandatory to access fields and other methods via _this_ keyword.
 ```
