@@ -16,7 +16,7 @@ class DataStorage<T extends string | number | boolean> {
     getItems() {
         return [...this.data]
     }
-}1
+}
 
 const textStorage = new DataStorage<string>();
 textStorage.addItem("Max")
