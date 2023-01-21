@@ -947,6 +947,24 @@ result2.split(' ')
 ```
 
 
+## Optional Chaining
+When you are not sure that certain property exists on object 
+
+```
+const fetchedUserData = {
+    id: "u1",
+    name: "max",
+    // job: { title: "ceo", description: "my own company"}
+}
+
+// javscript way
+console.log(fetchedUserData.job && fetchedUserData.job.title)
+
+// in typescript
+console.log(fetchedUserData?.job?.title)
+```
+
+
 
 ## Methods 
 A function properties on a class is called a _method_. Inside a method body, it's still mandatory to access fields and other methods via _this_ keyword.
