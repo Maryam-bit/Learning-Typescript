@@ -885,6 +885,28 @@ const userInputElement3  = document.getElementById('user-input')! as HTMLInputEl
 userInputElement3.value = "hi there"
 ```
 
+
+## Index Properties
+Allow us to create flexible objects
+
+If you don't know the exact property name of an object, let see the error example
+// { email: "not a valid email", username: "must start with a capital character"}
+
+```
+interface ErrorContainer {
+    [prop: string]: string;
+}
+```
+
+Any thing that can be converted to a string is a valid property name. 
+```
+const errorBag: ErrorContainer = {
+    email: "not a vlid email",
+    username: "must stasrt with a capital character"
+}
+```
+
+
 ## Methods 
 A function properties on a class is called a _method_. Inside a method body, it's still mandatory to access fields and other methods via _this_ keyword.
 ```
