@@ -1253,6 +1253,44 @@ class Product {
 ```
 
 
+## Namespace in typescript
+block of code 
+
+```
+namespace App {
+    export class Users {
+        getName () {
+            return "Max"
+        }
+    }
+
+    export interface UserObj {
+        name: string,
+        email: string
+    }
+}
+
+let u1 = new App.Users();
+
+console.warn(u1.getName()); // Max
+```
+
+
+## Import Namespace from another file
+Lets import namespace from lecture45 file here
+
+```
+/// <reference path="lecture45.ts" />
+namespace App {
+    let u2: UserObj = {
+        name: "max",
+        email: "max@gmail.com"
+    }
+    console.log(u2)
+}
+```
+
+
 
 ## Class Members
 Here is the most basic class - an empty one:
