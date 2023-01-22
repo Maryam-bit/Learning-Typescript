@@ -1162,7 +1162,8 @@ class Person2 {
 ```
 
 
-Property decorator 
+##Property decorator 
+
 ```
 function Log(target: any, propertyName: string | Symbol) {
     console.log("property decorator0")
