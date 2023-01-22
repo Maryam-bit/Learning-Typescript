@@ -1112,6 +1112,35 @@ names3.push("Manu") // not allowed
 ```
 
 
+## Decorators 
+Decorators in Typescript are used to add additional behavior or metadata to a class, method or property.
+
+
+## First Class Decorator
+
+```
+function Logger(constructor: Function) {
+    console.log("Logging .....")
+    console.log(constructor)
+}
+
+// @ is a special identififer that identifies the function as decorator
+// decorators executes when your class is defined, not istantiated
+@Logger // logs the whole Person class
+
+class Person {
+    name = "Max";
+    constructor() {
+        console.log("Creating person object .,...")
+    }
+}
+
+const pers  = new Person();
+
+console.log(pers)
+```
+
+
 ## Class Members
 Here is the most basic class - an empty one:
 ```
