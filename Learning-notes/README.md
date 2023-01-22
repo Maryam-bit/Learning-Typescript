@@ -1137,6 +1137,32 @@ class Person {
 ```
 
 
+## Decorator Factories
+
+Decorator factory returns a decorator function .Decorator factories give us more power and more possibilities of configuring what the decorator then does internally
+
+let's convert this function into a factory
+
+```
+function Logger2(logString: string) {
+    return function(constructor: Function) {
+        console.log(logString)
+        console.log(constructor)
+    };
+}
+
+@Logger2("LOGGING - PERSON")
+
+class Person2 {
+    name = "Max";
+    constructor() {
+        console.log("Creating person object .,...")
+    }
+}
+```
+
+
+
 ## Class Members
 Here is the most basic class - an empty one:
 ```
