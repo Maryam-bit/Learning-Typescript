@@ -1,4 +1,4 @@
-// accessor & parameter decorator
+// accessor, method & parameter decorator
 
 // accessor decorator
 function Log2(target: any, name: string, descriptor:  PropertyDescriptor) {
